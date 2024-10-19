@@ -1,4 +1,3 @@
-#TODO: morning FASTAPI use this for now
 import os
 from dotenv import load_dotenv
 import requests

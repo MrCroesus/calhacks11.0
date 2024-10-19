@@ -1,5 +1,3 @@
-#TODO: FASTAPI or some other flask for requests type shi 
-
 import os
 from dotenv import load_dotenv
 import requests
@@ -81,7 +79,7 @@ def main(owner, repo):
     processed_data = process_data(branches, commits)
     return processed_data
 
-# temp repo for test. #TODO: FASTAPI shi for easy requests
+# temp repo for test #TODO: GENERALIZE FOR FASTAPI
 if __name__ == "__main__":
     owner = "rovirmani"
     repo = "currgoatify"
