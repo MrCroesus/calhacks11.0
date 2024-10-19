@@ -80,23 +80,9 @@ def main(owner, repo):
     branches, commits = get_repository_data(owner, repo)
     processed_data = process_data(branches, commits)
     return processed_data
-# check rate limit before request
-def check_rate_limit():
-    rate_limit_url = f"{API_BASE_URL}/rate_limit"
-    response = requests.get(rate_limit_url, headers=headers)
-    if response.status_code == 200:
-        data = response.json()
-        core_limit = data['resources']['core']
-        print(f"API Rate Limit:")
-        print(f"  Limit: {core_limit['limit']}")
-        print(f"  Remaining: {core_limit['remaining']}")
-        print(f"  Reset Time: {datetime.fromtimestamp(core_limit['reset'], timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}")
-    else:
-        print(f"Failed to fetch rate limit info: {response.status_code} - {response.text}")
 
 # temp repo for test. #TODO: FASTAPI shi for easy requests
 if __name__ == "__main__":
-    check_rate_limit()
     owner = "rovirmani"
     repo = "currgoatify"
     result = main(owner, repo)
