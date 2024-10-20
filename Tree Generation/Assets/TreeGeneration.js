@@ -6,7 +6,7 @@ function onTrigger() {
   var remoteServiceModule = script.remoteServiceModule;
 
   var httpRequest = RemoteServiceHttpRequest.create();
-  httpRequest.url = "https://calhacks11-0.vercel.app/" + '/repo/MrCroesus/calhacks11.0';
+  httpRequest.url = "https://calhacks11-0.vercel.app" + '/repo/gshklovs/IrvineHacks';
   httpRequest.method = RemoteServiceHttpRequest.HttpRequestMethod.Get;
 
   print('Sending request!');
@@ -29,25 +29,20 @@ function generateTree(repo_tree) {
 //  print(repo_tree);
 
   const json = JSON.parse(repo_tree);
-//  json = getRepoTree();
     
   branches = json.branches;
+  print(branches.length);
   commits = json.commits;
+  print(commits.length);
   edges = json.relationships;
   
   branches_map = new Map();
   for (let i = 0; i < branches.length; i++) {
     branches_map.set(branches[i].name, i);
   }
-//  for (let i = 0; i < commits.length; i++) {
-//    // put commits into branches
-//    commit = commits[i];
-//    branches_map.get(commit.branch).push(commit);
-//  }
-  
+    
   commits_map = new Map();
-//  branches_map.forEach((branch_commits, branch_name) => {
-    for (let i = 0; i < commits.length; i++) {
+  for (let i = 0; i < commits.length; i++) {
       // determine commit hash and position
       commit = commits[i];
       commitHash = commit.sha;
@@ -59,8 +54,6 @@ function generateTree(repo_tree) {
       commitObject.getTransform().setWorldPosition(commitPosition);
       commits_map.set(commitHash, commitPosition);
     }
-//    branch_num += 1;
-//  })
     
   for (let i = 0; i < edges.length; i++) {
     // Get endpoint positions
@@ -78,8 +71,8 @@ function generateTree(repo_tree) {
     edgeObject.getTransform().setWorldScale(new vec3(0.25, node1.distance(node2), 0.25));
   }
 }
-// Add our onTrigger() function as a response to the custom trigger "my_trigger"
-//global.behaviorSystem.addCustomTriggerResponse('my_trigger', onTrigger);
+// Add our onTrigger() function as a response to the custom trigger "generate_tree_trigger"
+global.behaviorSystem.addCustomTriggerResponse('generate_tree_trigger', onTrigger);
 
 function createCommitNode() {
   if (script.commitNode) {
