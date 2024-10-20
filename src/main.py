@@ -7,7 +7,6 @@ import os
 from commit import Commit
 
 
-
 # #TODO:
 from grab_repo import get_repository_data, process_data
 from rate import check_rate_limit
@@ -88,9 +87,6 @@ async def get_commit_info(owner: str, repo: str, branch1: str, branch2: str):
     commit_obj = Commit(owner, repo)
     return commit_obj.create_pr(branch1, branch2)
     
-    
-
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

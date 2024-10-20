@@ -1,10 +1,50 @@
-- !<ObjectPrefab/2d28bfdb-de08-4038-a661-1e48cf2f8792>
+- !<ObjectPrefab/a0df973c-f0ff-471d-bdff-5976b100e3fe>
   PackagePath: ""
   objects:
-    - !<own> 294e3a0d-da08-4031-b7ee-eda0ed3dde2e
+    - !<own> d7d33547-f99b-42a5-acb0-381673d8896d
   LazyLoading: false
   RetainAssets: true
-- !<ScriptComponent/09df8416-0928-494b-b606-a64d3f66f03a>
+- !<RenderMeshVisual/23c4f5c1-aebe-43d9-904f-066d75b417dd>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> c71dde88-df6c-46a6-8426-d07b956a747e
+  Mesh: !<reference> 2e5e428e-9a20-4c3f-ad4a-4451f07df611
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/719d535a-1325-4478-9ebc-f84932a7db3c>
+  PrefabRemaps:
+    []
+  Name: Interactable
+  Enabled: true
+  ScriptAsset: !<reference> 652e631a-22d0-4941-9f74-2943df59f34c
+  ScriptInputsDefault:
+    targetingMode: true
+    enableInstantDrag: true
+    allowMultipleInteractors: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      targetingMode: !<float> 3.000000
+      enableInstantDrag: false
+      allowMultipleInteractors: true
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/7412e38c-ba18-4fb9-8edf-dd8caa5121fc>
   PrefabRemaps:
     []
   Name: InteractableOutlineFeedback
@@ -22,32 +62,11 @@
       activatingColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       outlineWeight: 0.025000
       meshVisuals: !<reference.RenderMeshVisual[]>
-        - !<reference> 63cb2ffb-d058-4a83-b7c0-3ca08a2a8aa7
+        - !<reference> 23c4f5c1-aebe-43d9-904f-066d75b417dd
   ScriptTypes:
     "":
       {}
-- !<SceneObject/294e3a0d-da08-4031-b7ee-eda0ed3dde2e>
-  PrefabRemaps:
-    []
-  Name: CommitNode
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 2.500000, y: 2.500000, z: 2.500000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 46885110-dc4e-4b2b-b795-117400448aa4
-    - !<own> 339eafc3-07cb-4f8e-9ccc-94c45c4325d7
-    - !<own> 777d8300-ffca-4aec-a60e-c576633a9b72
-    - !<own> 63cb2ffb-d058-4a83-b7c0-3ca08a2a8aa7
-    - !<own> 09df8416-0928-494b-b606-a64d3f66f03a
-    - !<own> 8bea2b06-617e-46c4-81a8-755d28fa9fce
-    - !<own> 3eaa9a7f-7e62-453d-acb5-7647e24ed8bd
-- !<BodyComponent/339eafc3-07cb-4f8e-9ccc-94c45c4325d7>
+- !<BodyComponent/75e194ef-27fe-43a6-b394-9d1dbe7f9f89>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -70,7 +89,7 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<ScriptComponent/3eaa9a7f-7e62-453d-acb5-7647e24ed8bd>
+- !<ScriptComponent/95f47328-a309-442e-a0d9-b0e90f28f876>
   PrefabRemaps:
     []
   Name: CrashingOut
@@ -82,51 +101,13 @@
     {}
   ScriptInputs:
     "":
-      {}
+      confirmWindow: !<reference.SceneObject> bfcd5dd1-ed03-4fd6-a858-9f26f4c0e52c
+      confirmOption1: !<reference.Text> 141f624e-b8ac-4b63-afad-1dbb6a246ccc
+      confirmOption2: !<reference.Text> 0abab6df-a2ed-4c35-ae66-80121ce8b0ec
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/46885110-dc4e-4b2b-b795-117400448aa4>
-  PrefabRemaps:
-    []
-  Name: Interactable
-  Enabled: true
-  ScriptAsset: !<reference> 652e631a-22d0-4941-9f74-2943df59f34c
-  ScriptInputsDefault:
-    targetingMode: true
-    enableInstantDrag: true
-    allowMultipleInteractors: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      targetingMode: !<float> 3.000000
-      enableInstantDrag: false
-      allowMultipleInteractors: true
-  ScriptTypes:
-    "":
-      {}
-- !<RenderMeshVisual/63cb2ffb-d058-4a83-b7c0-3ca08a2a8aa7>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> c71dde88-df6c-46a6-8426-d07b956a747e
-  Mesh: !<reference> 2e5e428e-9a20-4c3f-ad4a-4451f07df611
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<ScriptComponent/777d8300-ffca-4aec-a60e-c576633a9b72>
+- !<ScriptComponent/c7527cd8-49f9-470f-a2b2-e1adbe46d948>
   PrefabRemaps:
     []
   Name: InteractableManipulation
@@ -157,7 +138,7 @@
     {}
   ScriptInputs:
     "":
-      manipulateRootSceneObject: !<reference.SceneObject> 294e3a0d-da08-4031-b7ee-eda0ed3dde2e
+      manipulateRootSceneObject: !<reference.SceneObject> d7d33547-f99b-42a5-acb0-381673d8896d
       minimumScaleFactor: 0.250000
       maximumScaleFactor: !<float> 20.000000
       enableTranslation: true
@@ -181,7 +162,28 @@
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/8bea2b06-617e-46c4-81a8-755d28fa9fce>
+- !<SceneObject/d7d33547-f99b-42a5-acb0-381673d8896d>
+  PrefabRemaps:
+    []
+  Name: CommitNode
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 2.500000, y: 2.500000, z: 2.500000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 719d535a-1325-4478-9ebc-f84932a7db3c
+    - !<own> 75e194ef-27fe-43a6-b394-9d1dbe7f9f89
+    - !<own> c7527cd8-49f9-470f-a2b2-e1adbe46d948
+    - !<own> 23c4f5c1-aebe-43d9-904f-066d75b417dd
+    - !<own> 7412e38c-ba18-4fb9-8edf-dd8caa5121fc
+    - !<own> e3523033-f070-45f4-a853-727d6116fbca
+    - !<own> 95f47328-a309-442e-a0d9-b0e90f28f876
+- !<ScriptComponent/e3523033-f070-45f4-a853-727d6116fbca>
   PrefabRemaps:
     []
   Name: InteractableAudioFeedback

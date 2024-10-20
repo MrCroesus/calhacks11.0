@@ -24,11 +24,17 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    confirmOption1: false
+    confirmOption2: false
     confirmWindow: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
     - confirmWindow: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      conformOption1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      conformOption2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      confirmOption1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      confirmOption2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

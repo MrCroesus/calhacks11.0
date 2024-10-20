@@ -6,7 +6,7 @@ function onTrigger() {
   var remoteServiceModule = script.remoteServiceModule;
 
   var httpRequest = RemoteServiceHttpRequest.create();
-  httpRequest.url = "https://calhacks11-0.vercel.app" + '/repo/gshklovs/IrvineHacks';
+  httpRequest.url = "https://calhacks11-0.vercel.app" + '/repo/rovirmani/currgoatify';
   httpRequest.method = RemoteServiceHttpRequest.HttpRequestMethod.Get;
 
   print('Sending request!');
@@ -46,11 +46,12 @@ function generateTree(repo_tree) {
       // determine commit hash and position
       commit = commits[i];
       commitHash = commit.sha;
+      branchName = commit.branch;
       commitPosition = new vec3(5 * i - commits.length * 2.5, 5 * branches_map.get(commit.branch), -100);
             
       // initialize commit node prefab
       commitObject = createCommitNode();
-      commitObject.name = commitHash;
+      commitObject.name = branchName + "/" + commitHash;
       commitObject.getTransform().setWorldPosition(commitPosition);
       commits_map.set(commitHash, commitPosition);
     }
