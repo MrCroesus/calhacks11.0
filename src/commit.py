@@ -31,15 +31,12 @@ class Commit:
 
             code_changes_description = str(code_description_response.candidates[0].content.parts[0].text)
 
-            return {
-                "sha": commit_data["sha"],
-                "author": commit_data["commit"]["author"]["name"],
-                "email": commit_data["commit"]["author"]["email"],
-                "date": commit_data["commit"]["author"]["date"],
-                "message": commit_data["commit"]["message"],
-                "url": commit_data["html_url"],
-                "code_changes": code_changes_description
-            }
+            return f"\"{commit_data['commit']['message']}\"\n" \
+                   f"By {commit_data['commit']['author']['name']}\n" \
+                   f"Committed on: {commit_data['commit']['author']['date']}\n" \
+                   f"+ {commit_data['stats']['additions']} lines/ - {commit_data['stats']['deletions']} lines\n" \
+                   f"Commit Hash: {commit_data['sha']}\n\n" \
+                   f"Diff Analysis:\n{code_changes_description}"
         return {"error": f"Failed to fetch commit info. Status code: {response.status_code}"}
 
     def extract_code_changes(self, commit_data):
