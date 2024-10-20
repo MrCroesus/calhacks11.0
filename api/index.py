@@ -7,4 +7,4 @@ sys.path.append(str(Path(__file__).parent.parent))
 from src.main import app
 
 # This is necessary for Vercel serverless deployment
-export default app
+app = app
