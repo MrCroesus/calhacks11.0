@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 import requests
 from datetime import datetime, timezone
+from pprint import pformat, pprint
 
 # Load .env from the parent directory
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
@@ -84,4 +85,4 @@ if __name__ == "__main__":
     owner = "rovirmani"
     repo = "currgoatify"
     result = main(owner, repo)
-    print(result)
+    pprint(result)
