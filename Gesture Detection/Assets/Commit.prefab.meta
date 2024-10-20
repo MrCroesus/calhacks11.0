@@ -1,0 +1,60 @@
+- !<AssetImportMetadata/d605ab81-3037-424c-8e33-4b7e607c8c2f>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 7a3572c1-a375-419b-9602-969614e2accb
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 7a3572c1-a375-419b-9602-969614e2accb
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> 0baa9e58-e1b6-4a72-b645-d0944282db5b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/d54d7da3-3fb2-4fb9-9e94-6fd654c2527e>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/0baa9e58-e1b6-4a72-b645-d0944282db5b>
+  SourceRemaps:
+    - 285f20a2-50bf-4497-b9a8-5dd66dd9bba2: f37871d7-ad08-481c-8af1-8ac5445abef6
+    - 9ce54855-4208-4c7d-84c0-5eb8c9310887: 84c980e1-f607-4e41-a783-c3f4f6befe80
+  SourceState: !<own> ddf4240e-8353-4056-abf5-4fe64f103aa4
+- !<RenderMeshVisual/84c980e1-f607-4e41-a783-c3f4f6befe80>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 6204c401-8bfd-4e34-8cdf-55caeaf2da86
+  Mesh: !<reference> 0e7bfd5f-28e5-4556-8815-1f1c607a4db0
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/ddf4240e-8353-4056-abf5-4fe64f103aa4>
+  PackagePath: ""
+  objects:
+    - !<own> f37871d7-ad08-481c-8af1-8ac5445abef6
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/f37871d7-ad08-481c-8af1-8ac5445abef6>
+  PrefabRemaps:
+    []
+  Name: Commit
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 84c980e1-f607-4e41-a783-c3f4f6befe80

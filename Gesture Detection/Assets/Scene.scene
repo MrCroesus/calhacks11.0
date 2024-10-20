@@ -5,6 +5,8 @@
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> f682c1d0-01b7-452a-adc4-6e0365fa423a
     - !<own> 597f6fa4-23e5-4230-9e74-1ece142cd000
+    - !<own> 34b06d2a-e29a-4f68-9b11-6dddf8c23753
+    - !<own> 9f1ca3f7-b30b-4f1f-a3bd-621690dfbad6
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -5647,6 +5649,21 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<SceneObject/34b06d2a-e29a-4f68-9b11-6dddf8c23753>
+  PrefabRemaps:
+    []
+  Name: Start Transcription
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 40e5b783-9d42-4ef8-9d92-1d239f49effc
 - !<ColliderComponent/35cbf71c-ed0e-46d5-b668-09ab98fe1696>
   PrefabRemaps:
     []
@@ -6402,6 +6419,22 @@
       outlineWeight: -0.250000
       meshVisuals: !<reference.RenderMeshVisual[]>
         - !<reference> 7bf7be3b-d508-4f00-8460-35ef0af09f63
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/40e5b783-9d42-4ef8-9d92-1d239f49effc>
+  PrefabRemaps:
+    []
+  Name: Start Transcription
+  Enabled: true
+  ScriptAsset: !<reference> e90a673c-a2df-449d-b12c-35ca9d3b9afd
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
   ScriptTypes:
     "":
       {}
@@ -17620,6 +17653,21 @@
     - !<own> be831966-fdca-4965-ab18-bb0115dc2dec
   Components:
     []
+- !<SceneObject/9f1ca3f7-b30b-4f1f-a3bd-621690dfbad6>
+  PrefabRemaps:
+    []
+  Name: Simple Transcribe
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e4279c1f-1bd2-4088-9184-6dfc2d306730
 - !<ScriptComponent/9f46a74c-5a31-47e1-af35-8dbdf535c6e6>
   PrefabRemaps:
     []
@@ -19973,7 +20021,7 @@
 - !<ScriptComponent/ad13ff5f-1b74-4a0b-800e-a1706cd03ef4>
   PrefabRemaps:
     []
-  Name: GestureDetection
+  Name: GestureClassification
   Enabled: true
   ScriptAsset: !<reference> 118a3474-bb5e-471c-8075-fa841d221c80
   ScriptInputsDefault:
@@ -26103,6 +26151,26 @@
     - !<own> a136fc85-1629-41ad-8fc8-16f413be452d
   Components:
     []
+- !<ScriptComponent/e4279c1f-1bd2-4088-9184-6dfc2d306730>
+  PrefabRemaps:
+    []
+  Name: Simple Transcribe
+  Enabled: true
+  ScriptAsset: !<reference> 06f28bb0-fa46-4c6a-8098-b260fe377ab0
+  ScriptInputsDefault:
+    boosts: true
+    boostsAmount: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      vmlModule: !<reference.VoiceMLModule> c4fd381d-a56d-41bf-99c5-9b60d213856a
+      boosts: !<string[]>
+        []
+      boostsAmount: !<float> 0.000000
+  ScriptTypes:
+    "":
+      {}
 - !<DeviceTracking/e5553c8a-0b7e-4ef4-92d9-3e1318fb82c1>
   PrefabRemaps:
     []

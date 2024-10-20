@@ -1,0 +1,36 @@
+- !<AssetImportMetadata/4e972131-4acb-43dd-91ab-99065ab6c6de>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 96fa0a7c-1c6e-4858-8c82-127e8a0f3f8d
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 96fa0a7c-1c6e-4858-8c82-127e8a0f3f8d
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> 4aff9803-575f-4989-91f6-79ad5780ba7f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/d053a899-d586-4552-8ccb-32e411a395b7>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/4aff9803-575f-4989-91f6-79ad5780ba7f>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    camera: false
+    myPrefab: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - camera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      myPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
