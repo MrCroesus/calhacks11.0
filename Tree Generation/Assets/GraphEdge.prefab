@@ -1,10 +1,10 @@
-- !<ObjectPrefab/44e5cc4b-9b0c-4713-88eb-12d11edd0797>
+- !<ObjectPrefab/20cac489-ecd5-4f91-9939-2a65fd7d9cd9>
   PackagePath: ""
   objects:
-    - !<own> 0e98f4bd-1777-4b39-8b59-5fd40bfae117
+    - !<own> 1c606e00-c3fa-47f5-a502-69c276c0a651
   LazyLoading: false
   RetainAssets: true
-- !<SceneObject/0e98f4bd-1777-4b39-8b59-5fd40bfae117>
+- !<SceneObject/1c606e00-c3fa-47f5-a502-69c276c0a651>
   PrefabRemaps:
     []
   Name: GraphEdge
@@ -13,13 +13,13 @@
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 90.000000}
-    scale: {x: 0.500000, y: 5.000000, z: 0.500000}
+    scale: {x: 0.250000, y: 2.500000, z: 0.250000}
     hasSegmentScaleCompensation: false
   Children:
     []
   Components:
-    - !<own> cfb7ddff-b115-460a-ac95-8f5906badbab
-- !<RenderMeshVisual/cfb7ddff-b115-460a-ac95-8f5906badbab>
+    - !<own> 4248d1e1-2dc8-4f61-98b6-2cc5bd2f4678
+- !<RenderMeshVisual/4248d1e1-2dc8-4f61-98b6-2cc5bd2f4678>
   PrefabRemaps:
     []
   Name: Render Mesh Visual

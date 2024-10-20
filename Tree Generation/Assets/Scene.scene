@@ -5569,8 +5569,8 @@
     {}
   ScriptInputs:
     "":
-      commitNode: !<reference.ObjectPrefab> ddeca443-4ee8-418e-9493-b5473d9c9ab5
-      graphEdge: !<reference.ObjectPrefab> 44e5cc4b-9b0c-4713-88eb-12d11edd0797
+      commitNode: !<reference.ObjectPrefab> 441c9b16-e6ea-4267-9fd7-a6f92ba37454
+      graphEdge: !<reference.ObjectPrefab> 20cac489-ecd5-4f91-9939-2a65fd7d9cd9
   ScriptTypes:
     "":
       {}
