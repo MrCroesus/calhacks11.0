@@ -14,7 +14,7 @@ class Commit:
         self.API_BASE_URL = "https://api.github.com"
         
         # Configure Gemini
-        genai.configure(api_key=os.environ["GEMINI_TOKEN"])
+        genai.configure(api_key=os.getenv("GEMINI_TOKEN"))
         self.gemini = genai.GenerativeModel("gemini-1.5-flash")
 
     def get_commit(self, hash: str):
