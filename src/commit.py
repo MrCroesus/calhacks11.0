@@ -1,6 +1,7 @@
 import os
 import requests
 import google.generativeai as genai
+import re
 
 class Commit:
     def __init__(self, owner: str, repo: str):
@@ -27,16 +28,23 @@ class Commit:
         if response.status_code == 200:
             commit_data = response.json()
             code_changes = self.extract_code_changes(commit_data)
-            code_description_response = self.gemini.generate_content(f"Given the following commit message and code changes please generate a description of the changes done in the commit: COMMIT MESSAGE: {commit_data['commit']['message']} CODE CHANGES: {code_changes}")
+            code_description_response = self.gemini.generate_content(f"25 WORDS MAX. Given the following commit message and code changes please generate a description of the changes done in the commit: COMMIT MESSAGE: {commit_data['commit']['message']} CODE CHANGES: {code_changes}")
 
             code_changes_description = str(code_description_response.candidates[0].content.parts[0].text)
 
-            return f"\"{commit_data['commit']['message']}\"\n" \
-                   f"By {commit_data['commit']['author']['name']}\n" \
-                   f"Committed on: {commit_data['commit']['author']['date']}\n" \
-                   f"+ {commit_data['stats']['additions']} lines/ - {commit_data['stats']['deletions']} lines\n" \
-                   f"Commit Hash: {commit_data['sha']}\n\n" \
-                   f"Diff Analysis:\n{code_changes_description}"
+            commit_info = f"""{commit_data['commit']['message']}
+            By {commit_data['commit']['author']['name']}
+            Committed on: {commit_data['commit']['author']['date']}
+            + {commit_data['stats']['additions']} - {commit_data['stats']['deletions']} lines
+            Commit Hash: {commit_data['sha']}
+
+            Diff Analysis:
+            {code_changes_description}"""
+
+            # Remove all newlines and extra whitespace
+            commit_info = re.sub(r'\s+', ' ', commit_info)
+
+            return commit_info.strip()
         return {"error": f"Failed to fetch commit info. Status code: {response.status_code}"}
 
     def extract_code_changes(self, commit_data):
