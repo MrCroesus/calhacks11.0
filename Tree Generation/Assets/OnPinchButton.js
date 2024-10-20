@@ -1,4 +1,5 @@
 //@input SceneObject confirmWindow
+//@input SceneObject descriptionWindow
 //@input Asset.RemoteServiceModule remoteServiceModule
 
 var store = global.persistentStorageSystem.store;
@@ -58,6 +59,10 @@ script.hash2ToHash1 = function() {
     });
 }
 
-script.cancel = function() {
+script.confirmCancel = function() {
     script.confirmWindow.enabled = false;
+}
+
+script.descriptionCancel = function() {
+    script.descriptionWindow.enabled = false;
 }

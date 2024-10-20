@@ -2,7 +2,6 @@
 //@input Component.Text confirmOption1
 //@input Component.Text confirmOption2
 
-
 var collider = script.getSceneObject().getComponent("Physics.ColliderComponent");
 var store = global.persistentStorageSystem.store;
 

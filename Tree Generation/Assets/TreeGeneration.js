@@ -2,11 +2,18 @@
 //@input Asset.ObjectPrefab graphEdge
 //@input Asset.RemoteServiceModule remoteServiceModule
 
+var store = global.persistentStorageSystem.store;
+
 function onTrigger() {
   var remoteServiceModule = script.remoteServiceModule;
-
+    
+  owner = store.putString("owner", "rovirmani");
+  repo = store.putString("repo", "currgoatify")
+    
+  owner = store.getString("owner");
+  repo = store.getString("repo");
   var httpRequest = RemoteServiceHttpRequest.create();
-  httpRequest.url = "https://calhacks11-0.vercel.app" + '/repo/rovirmani/currgoatify';
+  httpRequest.url = "https://calhacks11-0.vercel.app" + '/repo/' + owner + '/' + repo;
   httpRequest.method = RemoteServiceHttpRequest.HttpRequestMethod.Get;
 
   print('Sending request!');

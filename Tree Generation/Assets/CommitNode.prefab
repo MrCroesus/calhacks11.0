@@ -4,6 +4,43 @@
     - !<own> d7d33547-f99b-42a5-acb0-381673d8896d
   LazyLoading: false
   RetainAssets: true
+- !<ScriptComponent/00c6955c-5bff-4ed4-8198-fa512a2e8089>
+  PrefabRemaps:
+    []
+  Name: DescriptionVisualization
+  Enabled: true
+  ScriptAsset: !<reference> 4bd0a562-e1af-49b5-a376-2a1eda597419
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      descriptionWindow: !<reference.SceneObject> bfcd5dd1-ed03-4fd6-a858-9f26f4c0e52c
+      description: !<reference.Text> e2007ba9-83c5-4358-86d5-ba7075a19a4f
+      remoteServiceModule: !<reference.RemoteServiceModule> 4e53686f-6101-4070-bf66-e27e75888282
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/1ac6b6be-3052-4ba1-92e2-c0ba7b45058a>
+  PrefabRemaps:
+    []
+  Name: PinchButton
+  Enabled: true
+  ScriptAsset: !<reference> a54c5722-d3fb-4aa5-97ff-f7425978bc59
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      editEventCallbacks: true
+      customFunctionForOnButtonPinched: !<reference.ScriptComponent> 00c6955c-5bff-4ed4-8198-fa512a2e8089
+      onButtonPinchedFunctionNames: !<string[]>
+        - onPinch
+  ScriptTypes:
+    "":
+      {}
 - !<RenderMeshVisual/23c4f5c1-aebe-43d9-904f-066d75b417dd>
   PrefabRemaps:
     []
@@ -101,9 +138,9 @@
     {}
   ScriptInputs:
     "":
-      confirmWindow: !<reference.SceneObject> bfcd5dd1-ed03-4fd6-a858-9f26f4c0e52c
-      confirmOption1: !<reference.Text> 141f624e-b8ac-4b63-afad-1dbb6a246ccc
-      confirmOption2: !<reference.Text> 0abab6df-a2ed-4c35-ae66-80121ce8b0ec
+      confirmWindow: !<reference.SceneObject> 9058a6e9-0419-417e-bdcf-f9b66f45982a
+      confirmOption1: !<reference.Text> ed415824-874e-43f4-a88a-c9ebb483d1c0
+      confirmOption2: !<reference.Text> 6938b43b-d898-459d-b76e-83a7299c2248
   ScriptTypes:
     "":
       {}
@@ -183,6 +220,8 @@
     - !<own> 7412e38c-ba18-4fb9-8edf-dd8caa5121fc
     - !<own> e3523033-f070-45f4-a853-727d6116fbca
     - !<own> 95f47328-a309-442e-a0d9-b0e90f28f876
+    - !<own> 1ac6b6be-3052-4ba1-92e2-c0ba7b45058a
+    - !<own> 00c6955c-5bff-4ed4-8198-fa512a2e8089
 - !<ScriptComponent/e3523033-f070-45f4-a853-727d6116fbca>
   PrefabRemaps:
     []
