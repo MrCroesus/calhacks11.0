@@ -33,6 +33,8 @@ def get_repository_data(owner, repo):
         for commit in branch_commits:
             commit['branch'] = branch_name
         all_commits.extend(branch_commits)
+        
+
 
     return branches, all_commits
 
