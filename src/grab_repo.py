@@ -4,6 +4,8 @@ import requests
 from datetime import datetime, timezone
 from pprint import pformat, pprint
 from collections import defaultdict
+from datetime import datetime
+
 
 # Load .env from the parent directory
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
@@ -23,6 +25,11 @@ def get_repository_data(owner, repo):
     branches_response = requests.get(branches_url, headers=headers)
     branches = branches_response.json()
 
+    def datetime_sort_key(date_string):
+        print(date_string)
+        return datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%SZ")
+
+
     all_commits = []
     for branch in branches:
         branch_name = branch['name']
@@ -33,9 +40,7 @@ def get_repository_data(owner, repo):
         for commit in branch_commits:
             commit['branch'] = branch_name
         all_commits.extend(branch_commits)
-        
-
-
+    all_commits.sort(key=lambda commit: commit['commit']['author']['date'])
     return branches, all_commits
 
 def process_data(branches, all_commits):
@@ -97,4 +102,4 @@ if __name__ == "__main__":
     owner = "rovirmani"
     repo = "currgoatify"
     result = main(owner, repo)
-    pprint(result)
+    # pprint(result)
