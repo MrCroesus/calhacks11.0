@@ -1,0 +1,37 @@
+- !<AssetImportMetadata/59af46d9-6a4d-4d5c-b7b0-dc9d61804d6c>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> d0164fa6-527d-4e6e-b84e-985d3137037a
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> d0164fa6-527d-4e6e-b84e-985d3137037a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> 1061176b-1f73-42fd-8c8a-e5a3388723f5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/4d98aa9b-7f79-43c9-af05-6b9301bf98e9>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/1061176b-1f73-42fd-8c8a-e5a3388723f5>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    commitNode: false
+    graphEdge: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - myPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      commitNode: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      graphEdge: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

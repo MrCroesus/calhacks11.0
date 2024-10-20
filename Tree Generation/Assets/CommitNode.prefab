@@ -1,0 +1,41 @@
+- !<ObjectPrefab/ddeca443-4ee8-418e-9493-b5473d9c9ab5>
+  PackagePath: ""
+  objects:
+    - !<own> 6ed72b56-c6ea-483a-a9d9-918a1a334a40
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/346a48cf-9bd4-4334-8a25-a1af3867e2e0>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 21fafdff-0708-467b-98a7-c4265bf95a9f
+  Mesh: !<reference> 3974b5ef-7dc7-4ed1-96d7-267ed99636c1
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/6ed72b56-c6ea-483a-a9d9-918a1a334a40>
+  PrefabRemaps:
+    []
+  Name: CommitNode
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 5.000000, y: 5.000000, z: 5.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 346a48cf-9bd4-4334-8a25-a1af3867e2e0
