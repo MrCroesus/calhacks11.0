@@ -28,7 +28,7 @@ class Commit:
         if response.status_code == 200:
             commit_data = response.json()
             code_changes = self.extract_code_changes(commit_data)
-            code_description_response = self.gemini.generate_content(f"25 WORDS MAX. Given the following commit message and code changes please generate a description of the changes done in the commit: COMMIT MESSAGE: {commit_data['commit']['message']} CODE CHANGES: {code_changes}")
+            code_description_response = self.gemini.generate_content(f"40 WORDS MAX. Given the following commit message and code changes please generate a description of the changes done in the commit: COMMIT MESSAGE: {commit_data['commit']['message']} CODE CHANGES: {code_changes}")
 
             code_changes_description = str(code_description_response.candidates[0].content.parts[0].text)
 
