@@ -32,7 +32,7 @@ async def get_repo_data(owner: str, repo: str):
     branches, commits = get_repository_data(owner, repo)
     processed_data = process_data(branches, commits)
     
-    os.makedirs('repo_data', exist_ok=True)
+    #os.makedirs('repo_data', exist_ok=True)
     
     # Save the data to a JSON file
     filename = f"repo_data/{owner}_{repo}_data.json"
@@ -57,7 +57,7 @@ async def get_repo_tree(owner: str, repo: str):
     processed_data = process_data(branches, commits)
     tree_data = process_repo_data(processed_data)
     
-    os.makedirs('repo_data', exist_ok=True)
+    #os.makedirs('repo_data', exist_ok=True)
     
     # Save the tree data to a JSON file
     filename = f"repo_data/{owner}_{repo}_tree_data.json"
