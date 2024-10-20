@@ -4,13 +4,13 @@ from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from dotenv import load_dotenv
 import os
-from commit import Commit
+from src.commit import Commit
 
 
 # #TODO:
-from grab_repo import get_repository_data, process_data
-from rate import check_rate_limit
-from tree_vis import process_repo_data
+from src.grab_repo import get_repository_data, process_data
+from src.rate import check_rate_limit
+from src.tree_vis import process_repo_data
 
 # Load environment variables
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
