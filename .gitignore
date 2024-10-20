@@ -4,3 +4,5 @@ venv/*
 repo_data/
 tree.dot
 **/.DS_Store
+.vercel
+.cursorignore
