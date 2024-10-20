@@ -32,15 +32,15 @@ async def get_repo_data(owner: str, repo: str):
     branches, commits = get_repository_data(owner, repo)
     processed_data = process_data(branches, commits)
     
-    os.makedirs('repo_data', exist_ok=True)
+    #os.makedirs('repo_data', exist_ok=True)
     
     # Save the data to a JSON file
     filename = f"repo_data/{owner}_{repo}_data.json"
-    with open(filename, 'w') as f:
-        json.dump(processed_data, f, indent=2)
+    # with open(filename, 'w') as f:
+    #     json.dump(processed_data, f, indent=2)
     
     # Print the formatted JSON to the terminal
-    print(json.dumps(processed_data, indent=2))
+    #print(json.dumps(processed_data, indent=2))
     
     content = jsonable_encoder(processed_data)
     return JSONResponse(
@@ -57,15 +57,15 @@ async def get_repo_tree(owner: str, repo: str):
     processed_data = process_data(branches, commits)
     tree_data = process_repo_data(processed_data)
     
-    os.makedirs('repo_data', exist_ok=True)
+    #os.makedirs('repo_data', exist_ok=True)
     
     # Save the tree data to a JSON file
     filename = f"repo_data/{owner}_{repo}_tree_data.json"
-    with open(filename, 'w') as f:
-        json.dump(tree_data, f, indent=2)
+    # with open(filename, 'w') as f:
+    #     json.dump(tree_data, f, indent=2)
     
     # Print the formatted JSON to the terminal
-    print(json.dumps(tree_data, indent=2))
+    #print(json.dumps(tree_data, indent=2))
     
     content = jsonable_encoder(tree_data)
     return JSONResponse(

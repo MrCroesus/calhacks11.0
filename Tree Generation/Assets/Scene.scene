@@ -5,7 +5,6 @@
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> 597f6fa4-23e5-4230-9e74-1ece142cd000
     - !<own> fff27d7f-4e17-4678-bf3f-b18fd97b6d9d
-    - !<own> a8ab7062-6bd4-4985-937f-a1e78cd4aab5
     - !<own> 154d39db-2f44-4526-8f9d-00b475c9e0ad
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
@@ -5571,6 +5570,7 @@
     "":
       commitNode: !<reference.ObjectPrefab> 2d28bfdb-de08-4038-a661-1e48cf2f8792
       graphEdge: !<reference.ObjectPrefab> 20cac489-ecd5-4f91-9939-2a65fd7d9cd9
+      remoteServiceModule: !<reference.RemoteServiceModule> 4e53686f-6101-4070-bf66-e27e75888282
   ScriptTypes:
     "":
       {}
@@ -7329,24 +7329,6 @@
       customFunctionForOnButtonPinched: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       onButtonPinchedFunctionNames: !<string[]>
         []
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/419e33b0-e46a-412d-b2fc-06a24204b281>
-  PrefabRemaps:
-    []
-  Name: PinchDetectionScript
-  Enabled: true
-  ScriptAsset: !<reference> 23f016ef-79b9-4f38-9c84-dc307a9917c2
-  ScriptInputsDefault:
-    textComponent: true
-    behaviorScript: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      textComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      behaviorScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -9275,7 +9257,7 @@
   PrefabRemaps:
     []
   Name: "[EXAMPLES] Interaction"
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -12081,7 +12063,7 @@
   PrefabRemaps:
     []
   Name: "[EXAMPLES] UI"
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -21227,7 +21209,7 @@
   PrefabRemaps:
     []
   Name: "[OPTIONAL] Visuals"
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -21326,21 +21308,6 @@
     bottom: -1.050000
     right: 5.000000
     top: 1.050000
-- !<SceneObject/a8ab7062-6bd4-4985-937f-a1e78cd4aab5>
-  PrefabRemaps:
-    []
-  Name: PinchDetectionScript
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 419e33b0-e46a-412d-b2fc-06a24204b281
 - !<ScriptComponent/a92104db-42e6-43e8-9bb8-73f56d04f50e>
   PrefabRemaps:
     []
