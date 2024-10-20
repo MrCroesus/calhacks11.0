@@ -82,6 +82,15 @@ async def get_commit_info(owner: str, repo: str, hash: str):
     commit_obj = Commit(owner, repo)
     return commit_obj.get_commit(hash=hash)
 
+@app.get("/createpr/{owner}/{repo}/{branch1}/{branch2}")
+async def get_commit_info(owner: str, repo: str, branch1: str, branch2: str):
+    """Create a pull request to merge branches BRANCH1 and BRANCH2."""
+    commit_obj = Commit(owner, repo)
+    return commit_obj.create_pr(branch1, branch2)
+    
+    
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
