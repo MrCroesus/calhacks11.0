@@ -3,3 +3,4 @@ venv/*
 **/__pycache__/
 repo_data/
 tree.dot
+**/.DS_Store

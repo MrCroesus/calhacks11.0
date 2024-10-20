@@ -11,36 +11,33 @@ def build_commit_tree(data: Dict) -> Node:
     commits = {commit['sha']: commit for commit in data['commits']}
     relationships = data['relationships']
 
-    for sha, commit in commits.items():
-        print(f"Processing commit: SHA={sha}, Parents={commit['parents']}, Message='{commit['message']}'")
-
     if not commits:
         logger.error("No commits found in the repository data")
         raise ValueError("No commits found in the repository data")
 
-    # Use the first commit as the root if there's no commit without parents
+    # Use the first commit as the root
     root_sha = next(iter(commits))
     logger.info(f"Using commit {root_sha} as the root")
 
-    def build_tree(sha: str, parent=None, processed=None) -> Node:
-        if processed is None:
-            processed = set()
-        
-        if sha in processed:
-            return None
+    # Dictionary to store created nodes
+    nodes = {}
 
-        processed.add(sha)
+    def build_tree(sha: str, parent=None) -> Node:
+        if sha in nodes:
+            return nodes[sha]
+
         commit = commits[sha]
         node = Node(f"{sha[:7]}: {commit['message']}", parent=parent)
-        
+        nodes[sha] = node
+
         for rel in relationships:
-            if rel['to'] == sha:
-                child = build_tree(rel['from'], parent=node, processed=processed)
-                if child:
+            if rel['to'] == sha and rel['from'] in commits:
+                child = build_tree(rel['from'], parent=node)
+                if child not in node.children:
                     node.children += (child,)
-        
+
         return node
-    
+
     return build_tree(root_sha)
 
 def generate_tree_visualization(root: Node) -> str:
