@@ -4,12 +4,13 @@ from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from dotenv import load_dotenv
 import os
+from commit import Commit
 
 
 # #TODO:
-from src.grab_repo import get_repository_data, process_data
-from src.rate import check_rate_limit
-from src.tree_vis import process_repo_data
+from grab_repo import get_repository_data, process_data
+from rate import check_rate_limit
+from tree_vis import process_repo_data
 
 # Load environment variables
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
@@ -73,6 +74,12 @@ async def get_repo_tree(owner: str, repo: str):
             "X-JSON-File": filename
         }
     )
+
+@app.get("/commit/{owner}/{repo}/get/{hash}")
+async def get_commit_info(owner: str, repo: str, hash: str):
+    """Get the information about a given commit."""
+    commit_obj = Commit(owner, repo)
+    return commit_obj.get_commit(hash=hash)
 
 if __name__ == "__main__":
     import uvicorn
