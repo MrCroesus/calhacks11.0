@@ -1,10 +1,112 @@
-- !<ObjectPrefab/ddeca443-4ee8-418e-9493-b5473d9c9ab5>
+- !<ObjectPrefab/2d28bfdb-de08-4038-a661-1e48cf2f8792>
   PackagePath: ""
   objects:
-    - !<own> 6ed72b56-c6ea-483a-a9d9-918a1a334a40
+    - !<own> 294e3a0d-da08-4031-b7ee-eda0ed3dde2e
   LazyLoading: false
   RetainAssets: true
-- !<RenderMeshVisual/346a48cf-9bd4-4334-8a25-a1af3867e2e0>
+- !<ScriptComponent/09df8416-0928-494b-b606-a64d3f66f03a>
+  PrefabRemaps:
+    []
+  Name: InteractableOutlineFeedback
+  Enabled: true
+  ScriptAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
+  ScriptInputsDefault:
+    hoveringColor: true
+    activatingColor: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      targetOutlineMaterial: !<reference.Material> fefa0256-03d4-444c-b107-8880ccd2ad8f
+      hoveringColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 0.040000, w: 1.000000}
+      activatingColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      outlineWeight: 0.025000
+      meshVisuals: !<reference.RenderMeshVisual[]>
+        - !<reference> 63cb2ffb-d058-4a83-b7c0-3ca08a2a8aa7
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/294e3a0d-da08-4031-b7ee-eda0ed3dde2e>
+  PrefabRemaps:
+    []
+  Name: CommitNode
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 2.500000, y: 2.500000, z: 2.500000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 46885110-dc4e-4b2b-b795-117400448aa4
+    - !<own> 339eafc3-07cb-4f8e-9ccc-94c45c4325d7
+    - !<own> 777d8300-ffca-4aec-a60e-c576633a9b72
+    - !<own> 63cb2ffb-d058-4a83-b7c0-3ca08a2a8aa7
+    - !<own> 09df8416-0928-494b-b606-a64d3f66f03a
+    - !<own> 8bea2b06-617e-46c4-81a8-755d28fa9fce
+    - !<own> 3eaa9a7f-7e62-453d-acb5-7647e24ed8bd
+- !<BodyComponent/339eafc3-07cb-4f8e-9ccc-94c45c4325d7>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<ScriptComponent/3eaa9a7f-7e62-453d-acb5-7647e24ed8bd>
+  PrefabRemaps:
+    []
+  Name: CrashingOut
+  Enabled: true
+  ScriptAsset: !<reference> 644fb680-bc87-48d8-b6c9-ae58e94ea48d
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/46885110-dc4e-4b2b-b795-117400448aa4>
+  PrefabRemaps:
+    []
+  Name: Interactable
+  Enabled: true
+  ScriptAsset: !<reference> 652e631a-22d0-4941-9f74-2943df59f34c
+  ScriptInputsDefault:
+    targetingMode: true
+    enableInstantDrag: true
+    allowMultipleInteractors: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      targetingMode: !<float> 3.000000
+      enableInstantDrag: false
+      allowMultipleInteractors: true
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/63cb2ffb-d058-4a83-b7c0-3ca08a2a8aa7>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
@@ -17,25 +119,83 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 21fafdff-0708-467b-98a7-c4265bf95a9f
-  Mesh: !<reference> 3974b5ef-7dc7-4ed1-96d7-267ed99636c1
+    - !<reference> c71dde88-df6c-46a6-8426-d07b956a747e
+  Mesh: !<reference> 2e5e428e-9a20-4c3f-ad4a-4451f07df611
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/6ed72b56-c6ea-483a-a9d9-918a1a334a40>
+- !<ScriptComponent/777d8300-ffca-4aec-a60e-c576633a9b72>
   PrefabRemaps:
     []
-  Name: CommitNode
+  Name: InteractableManipulation
   Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 5.000000, y: 5.000000, z: 5.000000}
-    hasSegmentScaleCompensation: false
-  Children:
+  ScriptAsset: !<reference> 664b556b-1946-4c2c-866a-e675b4e86006
+  ScriptInputsDefault:
+    minimumScaleFactor: true
+    maximumScaleFactor: true
+    enableTranslation: true
+    enableRotation: true
+    enableScale: true
+    enableStretchZ: true
+    showStretchZProperties: true
+    zStretchFactorMin: true
+    zStretchFactorMax: true
+    useFilter: true
+    showFilterProperties: true
+    minCutoff: true
+    beta: true
+    dcutoff: true
+    showTranslationProperties: true
+    _enableXTranslation: true
+    _enableYTranslation: true
+    _enableZTranslation: true
+    showRotationProperties: true
+    _rotationAxis: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      manipulateRootSceneObject: !<reference.SceneObject> 294e3a0d-da08-4031-b7ee-eda0ed3dde2e
+      minimumScaleFactor: 0.250000
+      maximumScaleFactor: !<float> 20.000000
+      enableTranslation: true
+      enableRotation: true
+      enableScale: true
+      enableStretchZ: true
+      showStretchZProperties: false
+      zStretchFactorMin: !<float> 1.000000
+      zStretchFactorMax: !<float> 12.000000
+      useFilter: true
+      showFilterProperties: false
+      minCutoff: !<float> 2.000000
+      beta: 0.015000
+      dcutoff: !<float> 1.000000
+      showTranslationProperties: false
+      _enableXTranslation: true
+      _enableYTranslation: true
+      _enableZTranslation: true
+      showRotationProperties: false
+      _rotationAxis: All
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/8bea2b06-617e-46c4-81a8-755d28fa9fce>
+  PrefabRemaps:
     []
-  Components:
-    - !<own> 346a48cf-9bd4-4334-8a25-a1af3867e2e0
+  Name: InteractableAudioFeedback
+  Enabled: true
+  ScriptAsset: !<reference> 1ad7da86-2c32-418c-bdf1-b7150c07c912
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      hoverAudioTrack: !<reference.AudioTrackAsset> 97bf97ae-b2da-47d7-bde6-003f597fe888
+      triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
+      triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
+  ScriptTypes:
+    "":
+      {}

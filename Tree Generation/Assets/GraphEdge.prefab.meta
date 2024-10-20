@@ -1,29 +1,29 @@
-- !<AssetImportMetadata/6479f43b-5aad-4c56-808f-1492155c4528>
+- !<AssetImportMetadata/ab35d99c-ca98-480f-bfd7-47f69c4170fc>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> 44e5cc4b-9b0c-4713-88eb-12d11edd0797
+    ObjectPrefab: !<reference> 20cac489-ecd5-4f91-9939-2a65fd7d9cd9
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> 44e5cc4b-9b0c-4713-88eb-12d11edd0797
+  PrimaryAsset: !<reference> 20cac489-ecd5-4f91-9939-2a65fd7d9cd9
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    ObjectPrefab: !<own> 3c60e35b-6644-4b79-b294-73f05b557465
+    ObjectPrefab: !<own> 0bae925e-225d-47ed-af59-57f6f6d4ee38
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/dcf627e5-41bc-430b-b2e4-a27637311672>
+  ImporterSettings: !<AssetImporterSettings/b515e80b-a48a-461c-8330-dc6c1a2e6cc8>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ObjectPrefab/34989150-d519-4f66-aa16-db3574d40d0f>
+- !<ObjectPrefabAssetData/0bae925e-225d-47ed-af59-57f6f6d4ee38>
+  SourceRemaps:
+    - 1c606e00-c3fa-47f5-a502-69c276c0a651: bb9bf220-1949-4c36-97c4-ef9785cc7b2a
+    - 4248d1e1-2dc8-4f61-98b6-2cc5bd2f4678: 5b9c4451-8f64-4a97-80bb-33a02023203d
+  SourceState: !<own> 4d347c1a-1abe-4fd2-b5f4-29cb815853da
+- !<ObjectPrefab/4d347c1a-1abe-4fd2-b5f4-29cb815853da>
   PackagePath: ""
   objects:
-    - !<own> e13cbc2c-497b-40df-a64f-bb917b782a73
+    - !<own> bb9bf220-1949-4c36-97c4-ef9785cc7b2a
   LazyLoading: false
   RetainAssets: true
-- !<ObjectPrefabAssetData/3c60e35b-6644-4b79-b294-73f05b557465>
-  SourceRemaps:
-    - 0e98f4bd-1777-4b39-8b59-5fd40bfae117: e13cbc2c-497b-40df-a64f-bb917b782a73
-    - cfb7ddff-b115-460a-ac95-8f5906badbab: 62dce174-9760-4cb8-97ba-280988b09193
-  SourceState: !<own> 34989150-d519-4f66-aa16-db3574d40d0f
-- !<RenderMeshVisual/62dce174-9760-4cb8-97ba-280988b09193>
+- !<RenderMeshVisual/5b9c4451-8f64-4a97-80bb-33a02023203d>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
@@ -43,7 +43,7 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/e13cbc2c-497b-40df-a64f-bb917b782a73>
+- !<SceneObject/bb9bf220-1949-4c36-97c4-ef9785cc7b2a>
   PrefabRemaps:
     []
   Name: GraphEdge
@@ -52,9 +52,9 @@
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 90.000000}
-    scale: {x: 0.500000, y: 5.000000, z: 0.500000}
+    scale: {x: 0.250000, y: 2.500000, z: 0.250000}
     hasSegmentScaleCompensation: false
   Children:
     []
   Components:
-    - !<own> 62dce174-9760-4cb8-97ba-280988b09193
+    - !<own> 5b9c4451-8f64-4a97-80bb-33a02023203d
